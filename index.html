@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2196F3">
+    <meta name="description" content="Block matching puzzle game - Progressive Web App">
+    <title>Block Match Game</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Block Match Game</h1>
+            <div class="score-container">
+                <div class="score-item">
+                    <span class="label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Moves:</span>
+                    <span id="moves">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div id="game-board"></div>
+            <div id="game-over" class="game-over hidden">
+                <h2>Game Over!</h2>
+                <p>No more moves available</p>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn" class="btn">Play Again</button>
+            </div>
+        </main>
+        
+        <footer>
+            <button id="new-game-btn" class="btn">New Game</button>
+            <button id="hint-btn" class="btn">Hint</button>
+        </footer>
+    </div>
+    
+    <script src="game.js"></script>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed', err));
+            });
+        }
+    </script>
+</body>
+</html>
