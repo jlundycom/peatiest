@@ -1,0 +1,23 @@
+{
+  "name": "peatiest",
+  "version": "1.0.0",
+  "description": "A progressive web application block matching puzzle game",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "pwa",
+    "progressive-web-app",
+    "game",
+    "puzzle",
+    "block-match",
+    "match-3"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "canvas": "^3.2.0"
+  }
+}

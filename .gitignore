@@ -1,0 +1,8 @@
+node_modules/
+*.log
+.DS_Store
+create-icons.js
+convert-svg-to-png.js
+icon-192.svg
+icon-512.svg
+package-lock.json
